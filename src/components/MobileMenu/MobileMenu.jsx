@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import * as Dialog from '@radix-ui/react-dialog';
 
-import { QUERIES, COLORS, WEIGHTS } from '../../constants';
+import { QUERIES, WEIGHTS } from '../../constants';
 
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
@@ -45,7 +45,7 @@ const MobileMenu = () => {
 const Overlay = styled(Dialog.Overlay)`
   position: fixed;
   inset: 0;
-  background: hsl(220deg 5% 40% / 0.8);
+  background: var(--color-backdrop);
 `;
 
 const Content = styled(Dialog.Content)`
@@ -75,14 +75,14 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled.a`
-  color: ${COLORS.gray[900]};
+   color: var(--color-gray-900);
   font-weight: ${WEIGHTS.medium};
   text-decoration: none;
   font-size: 1.125rem;
   text-transform: uppercase;
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 `;
 
